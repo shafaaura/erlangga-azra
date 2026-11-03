@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sebuah Cerita Tentang Kita</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HALAMAN PEMBUKA -->
+    <div class="opening" id="opening">
+        <div class="opening-card">
+            <div class="floating-heart">♡</div>
+
+            <p class="eyebrow">ADA SESUATU BUAT KAMU</p>
+
+            <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-letter">
+                    <span>Untuk kamu ♡</span>
+                </div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-front"></div>
+                <div class="envelope-heart">♥</div>
+            </div>
+
+            <h1>Hai, kamu!</h1>
+
+            <p class="opening-description">
+                Aku punya sesuatu yang ingin aku tunjukin.
+                Nggak besar, tapi dibuat khusus buat seseorang.
+            </p>
+
+            <button class="primary-button" onclick="enterWebsite()">
+                Buka punya kamu ♡
+            </button>
+
+            <p class="opening-small">Dibuat dengan banyak rasa sayang.</p>
+        </div>
+    </div>
+
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+        <a href="#home" class="logo">S <span>♡</span> E</a>
+
+        <div class="nav-links">
+            <a href="#home">Beranda</a>
+            <a href="#story">Cerita</a>
+            <a href="#gallery">Foto</a>
+            <a href="#distance">Jarak</a>
+            <a href="#letter">Surat</a>
+        </div>
+    </nav>
+
+
+    <!-- HALAMAN UTAMA -->
+    <header class="hero section" id="home">
+
+        <div class="hero-content">
+            <p class="eyebrow">SEBUAH HALAMAN KECIL UNTUKMU</p>
+
+            <h1>
+                Kalau ditanya<br>
+                siapa orang<br>
+                <span>favoritku?</span>
+            </h1>
+
+            <p class="hero-description">
+                Jawabannya mungkin sudah kamu tahu.
+                Tapi kali ini aku mau menyimpan sedikit cerita
+                tentang kamu dan aku di sini.
+            </p>
+
+            <a href="#story" class="primary-button link-button">
+                Lihat cerita kita <span>↓</span>
+            </a>
+
+            <div class="hero-signature">
+                dibuat khusus untuk
+                <strong>Erlangga Azra Asyraffi.</strong>
+            </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+            <div class="hero-decoration">♡</div>
+
+            <div class="hero-photo">
+                <img src="utama.jpg" alt="Foto kita">
+            </div>
+
+            <div class="photo-caption">
+                <span>♡</span>
+                Salah satu hal favoritku.
+            </div>
+
+            <div class="hero-sticker">punya aku? hehe</div>
+        </div>
+
+    </header>
+
+
+    <!-- BAGIAN CERITA -->
+    <section class="story-section section" id="story">
+
+        <div class="section-heading">
+            <p class="eyebrow">01 — AWAL SEMUANYA</p>
+            <h2>Siapa sangka, ya?</h2>
+            <p>
+                Dari pertemuan biasa, sampai akhirnya punya cerita bersama.
+            </p>
+        </div>
+
+        <div class="story-layout">
+
+            <div class="story-photo">
+                <img src="foto1.jpg" alt="Kenangan awal kita">
+                <span class="photo-stamp">Awal cerita ♡</span>
+            </div>
+
+            <div class="story-text">
+                <span class="story-date">SEBUAH PERTEMUAN</span>
+
+                <h3>Berawal dari acara HUT sekolah.</h3>
+
+                <p>
+                    Masih ingat waktu pertama kali kita bertemu?
+                    Di acara HUT sekolah, dari sekian banyak orang,
+                    ternyata ada seseorang yang akhirnya punya tempat
+                    spesial di hidup aku.
+                </p>
+
+                <p>
+                    Awalnya mungkin nggak ada yang istimewa.
+                    Nggak pernah kepikiran kalau pertemuan itu
+                    bakal jadi awal dari cerita sepanjang ini.
+                </p>
+
+                <p>
+                    Lucu juga kalau dipikir-pikir.
+                    Ternyata hal sederhana bisa membawa seseorang
+                    jadi begitu berarti.
+                </p>
+
+                <div class="little-quote">
+                    "Kadang, cerita terbaik datang dari hal
+                    yang sama sekali nggak kita rencanakan."
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- GALERI FOTO -->
+    <section class="gallery-section section" id="gallery">
+
+        <div class="section-heading">
+            <p class="eyebrow">02 — GALERI KITA</p>
+            <h2>Beberapa hal yang ingin aku simpan.</h2>
+            <p>
+                Klik fotonya, ya. Ada cerita kecil di balik masing-masing foto.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <button class="photo-card" onclick="openMemory(0)">
+                <img src="foto2.jpg" alt="Kenangan pertama">
+                <div class="photo-info">
+                    <span>01 / Momen favorit</span>
+                    <span>↗</span>
+                </div>
+            </button>
+
+            <button class="photo-card photo-tall" onclick="openMemory(1)">
+                <img src="foto3.jpg" alt="Kenangan kedua">
+                <div class="photo-info">
+                    <span>02 / Tentang kamu</span>
+                    <span>↗</span>
+                </div>
+            </button>
+
+            <button class="photo-card" onclick="openMemory(2)">
+                <img src="foto4.jpg" alt="Kenangan ketiga">
+                <div class="photo-info">
+                    <span>03 / Tentang kita</span>
+                    <span>↗</span>
+                </div>
+            </button>
+
+            <button class="photo-card photo-tall" onclick="openMemory(3)">
+                <img src="foto5.jpg" alt="Kenangan keempat">
+                <div class="photo-info">
+                    <span>04 / Hari yang baik</span>
+                    <span>↗</span>
+                </div>
+            </button>
+
+            <button class="photo-card photo-wide" onclick="openMemory(4)">
+                <img src="foto6.jpg" alt="Kenangan kelima">
+                <div class="photo-info">
+                    <span>05 / Satu lagi kenangan</span>
+                    <span>↗</span>
+                </div>
+            </button>
+
+        </div>
+
+        <p class="gallery-bottom">
+            Satu foto, satu cerita. Dan semuanya punya tempat sendiri. ♡
+        </p>
+
+    </section>
+
+
+    <!-- BAGIAN TENTANG DIA -->
+    <section class="favorite-section section">
+
+        <div class="favorite-content">
+            <p class="eyebrow">03 — SEDIKIT TENTANG KAMU</p>
+
+            <h2>
+                Ada banyak hal kecil<br>
+                yang bikin aku suka.
+            </h2>
+
+            <p>
+                Mungkin aku nggak selalu bilang secara langsung.
+                Tapi ada banyak hal dari kamu yang aku hargai.
+                Cara kamu cerita, cara kamu bercanda,
+                dan hal-hal sederhana yang kadang bikin hari aku lebih baik.
+            </p>
+
+            <button class="outline-button" onclick="openFavorite()">
+                Ada yang mau aku bilang ♡
+            </button>
+        </div>
+
+        <div class="favorite-decoration">
+            <div class="favorite-circle">♡</div>
+            <span>kamu, salah satu favoritku.</span>
+        </div>
+
+    </section>
+
+
+    <!-- BAGIAN LDR -->
+    <section class="distance-section section" id="distance">
+
+        <div class="distance-top">
+            <p class="eyebrow">04 — MESKI ADA JARAK</p>
+            <span class="distance-symbol">♡</span>
+        </div>
+
+        <h2>
+            Nggak selalu dekat,<br>
+            tapi tetap <span>diingat.</span>
+        </h2>
+
+        <div class="distance-description">
+            <p>
+                Kadang aku pengin bisa ketemu kamu kapan aja.
+                Bisa cerita langsung, menghabiskan waktu bersama,
+                atau sekadar duduk tanpa harus buru-buru berpisah.
+            </p>
+
+            <p>
+                Tapi untuk sekarang, kita masih harus berdamai
+                dengan jarak dan kesibukan masing-masing.
+                Ada hari-hari ketika kangen terasa lebih banyak
+                daripada yang bisa aku ungkapkan.
+            </p>
+
+            <p>
+                Aku nggak minta semuanya selalu mudah.
+                Aku cuma berharap kita tetap saling menjaga,
+                saling percaya, dan nggak lupa kalau kita
+                sedang sama-sama berusaha.
+            </p>
+        </div>
+
+        <div class="distance-footer">
+            <span>Sejauh apa pun jaraknya,</span>
+            <strong>kamu tetap jadi seseorang yang aku tunggu.</strong>
+        </div>
+
+    </section>
+
+
+    <!-- KARTU PESAN -->
+    <section class="message-section section" id="messages">
+
+        <div class="section-heading">
+            <p class="eyebrow">05 — PESAN KECIL DARIKU</p>
+            <h2>Ada beberapa hal buat kamu.</h2>
+            <p>
+                Pilih salah satu kartu. Aku punya sesuatu untuk disampaikan.
+            </p>
+        </div>
+
+        <div class="message-grid">
+
+            <button class="message-card" onclick="openMessage(0)">
+                <span class="message-number">01</span>
+                <span class="message-icon">♡</span>
+                <h3>Kalau kamu capek</h3>
+                <p>Buka pesan ini ↗</p>
+            </button>
+
+            <button class="message-card" onclick="openMessage(1)">
+                <span class="message-number">02</span>
+                <span class="message-icon">✉</span>
+                <h3>Kalau kamu kangen</h3>
+                <p>Buka pesan ini ↗</p>
+            </button>
+
+            <button class="message-card" onclick="openMessage(2)">
+                <span class="message-number">03</span>
+                <span class="message-icon">♡</span>
+                <h3>Kalau kamu ragu</h3>
+                <p>Buka pesan ini ↗</p>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SURAT CINTA -->
+    <section class="letter-section section" id="letter">
+
+        <div class="letter-card">
+            <div class="letter-decoration">♡</div>
+
+            <p class="eyebrow">06 — SATU SURAT UNTUKMU</p>
+
+            <h2>Ada yang ingin<br>aku sampaikan.</h2>
+
+            <p>
+                Mungkin ada beberapa hal yang lebih mudah
+                aku tulis daripada aku ucapkan langsung.
+            </p>
+
+            <button class="primary-button" onclick="openLetter()">
+                Buka suratnya ♡
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- PENUTUP -->
+    <footer class="footer">
+        <div class="footer-heart">♡</div>
+
+        <p class="eyebrow">SAMPAI DI SINI DULU</p>
+
+        <h2>Terima kasih sudah<br>jadi bagian dari cerita aku.</h2>
+
+        <p>
+            Semoga masih banyak cerita baik yang bisa kita buat bersama.
+        </p>
+
+        <div class="footer-signature">
+            Dengan banyak sayang,<br>
+            dari seseorang yang beruntung mengenal kamu.
+        </div>
+
+        <span class="footer-copyright">A LITTLE WEBSITE MADE FOR ERLANGGA · 2026</span>
+    </footer>
+
+
+    <!-- POPUP CERITA -->
+    <div class="modal" id="memoryModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <p class="eyebrow" id="modalLabel">CERITA KITA</p>
+            <div class="modal-heart">♡</div>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+            <button class="modal-done" onclick="closeModal()">Tutup dulu ♡</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

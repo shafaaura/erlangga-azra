@@ -1,0 +1,1096 @@
+:root {
+    --navy: #1b304b;
+    --blue: #789bbd;
+    --baby: #e5eff8;
+    --pale: #f1f6fa;
+    --white: #ffffff;
+    --text: #53677e;
+    --muted: #91a0af;
+    --cream: #fbfcfd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--blue);
+}
+
+/* PEMBUKA */
+
+.opening {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(145deg, #172b45, #375879);
+    transition: opacity .7s, visibility .7s;
+}
+
+.opening.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.opening-card {
+    position: relative;
+    max-width: 460px;
+    width: 100%;
+    padding: 55px 35px;
+    text-align: center;
+    background: #f7fbff;
+    border-radius: 25px;
+    box-shadow: 0 25px 80px #07172955;
+    overflow: hidden;
+}
+
+.opening-card::before,
+.opening-card::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #dceaf6;
+    opacity: .6;
+}
+
+.opening-card::before {
+    top: -90px;
+    left: -70px;
+}
+
+.opening-card::after {
+    bottom: -100px;
+    right: -60px;
+}
+
+.opening-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    font-size: 35px;
+    color: #9dbbd8;
+}
+
+.opening-card .eyebrow {
+    color: #789bbd;
+}
+
+.opening-card h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: 48px;
+    font-weight: 500;
+    margin: 25px 0 12px;
+}
+
+.opening-description {
+    max-width: 300px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 2;
+    color: #78899b;
+}
+
+.opening-small {
+    font-size: 10px;
+    color: #9baaba;
+    margin-top: 22px;
+}
+
+/* AMPLOP */
+
+.envelope {
+    position: relative;
+    width: 130px;
+    height: 90px;
+    margin: 35px auto 25px;
+    animation: envelopeFloat 2.5s ease-in-out infinite;
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #9dbbd8;
+    border-radius: 5px;
+}
+
+.envelope-letter {
+    position: absolute;
+    width: 105px;
+    height: 70px;
+    left: 12px;
+    top: -15px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-top: 52px solid #c3d9ed;
+    z-index: 3;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #aec8e0;
+    clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 5px;
+    z-index: 4;
+}
+
+.envelope-heart {
+    position: absolute;
+    z-index: 5;
+    top: 40px;
+    left: 57px;
+    color: white;
+    font-size: 18px;
+}
+
+@keyframes envelopeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+/* TOMBOL */
+
+.primary-button {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 28px;
+}
+
+.primary-button:hover {
+    background: #54799f;
+    transform: translateY(-3px);
+}
+
+.link-button span {
+    margin-left: 18px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background: var(--cream);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    color: var(--text);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    padding: 85px 12%;
+    display: grid;
+    grid-template-columns: 1fr .85fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero h1 {
+    color: var(--navy);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.13;
+    font-weight: 500;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: var(--blue);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 390px;
+    font-size: 13px;
+    line-height: 2;
+    color: #78899b;
+}
+
+.hero-signature {
+    margin-top: 55px;
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 2;
+}
+
+.hero-signature strong {
+    display: block;
+    color: var(--navy);
+    font-size: 12px;
+}
+
+.hero-photo-wrap {
+    position: relative;
+    max-width: 390px;
+    margin: auto;
+    width: 100%;
+}
+
+.hero-photo {
+    background: white;
+    padding: 12px;
+    box-shadow: 0 15px 50px #172b4517;
+    transform: rotate(2deg);
+}
+
+.hero-photo img {
+    height: 440px;
+}
+
+.photo-caption {
+    text-align: center;
+    padding-top: 18px;
+    color: #8799ab;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.photo-caption span {
+    color: #8eabc8;
+    margin-right: 5px;
+}
+
+.hero-decoration {
+    position: absolute;
+    top: -50px;
+    right: -25px;
+    color: #b4cce3;
+    font-size: 75px;
+    transform: rotate(15deg);
+}
+
+.hero-sticker {
+    position: absolute;
+    bottom: 45px;
+    left: -50px;
+    background: #dceaf6;
+    color: var(--navy);
+    padding: 12px 18px;
+    font-size: 10px;
+    border-radius: 20px;
+    transform: rotate(-7deg);
+}
+
+/* BAGIAN UMUM */
+
+.section {
+    padding: 110px 12%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: 500;
+    margin: 17px 0;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* CERITA */
+
+.story-section {
+    background: var(--baby);
+}
+
+.story-layout {
+    display: grid;
+    grid-template-columns: .9fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.story-photo {
+    position: relative;
+    padding: 12px;
+    background: white;
+    transform: rotate(-2deg);
+    box-shadow: 0 15px 40px #172b4510;
+}
+
+.story-photo img {
+    height: 420px;
+}
+
+.photo-stamp {
+    position: absolute;
+    bottom: 25px;
+    right: -25px;
+    background: var(--navy);
+    color: white;
+    padding: 12px 17px;
+    font-size: 10px;
+    transform: rotate(5deg);
+}
+
+.story-date {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.story-text h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: 35px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.story-text p {
+    font-size: 13px;
+    line-height: 2.1;
+    color: #6e8195;
+    margin-bottom: 16px;
+}
+
+.little-quote {
+    margin-top: 25px;
+    border-left: 2px solid #8baac8;
+    padding: 12px 18px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--navy);
+}
+
+/* GALERI */
+
+.gallery-section {
+    background: var(--cream);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.photo-card {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 10px 35px #172b450c;
+    transition: .35s;
+}
+
+.photo-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px #172b4519;
+}
+
+.photo-card img {
+    height: 290px;
+    transition: .5s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.02);
+}
+
+.photo-tall img {
+    height: 380px;
+}
+
+.photo-wide {
+    grid-column: span 2;
+}
+
+.photo-wide img {
+    height: 370px;
+}
+
+.photo-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 7px 7px;
+    color: var(--navy);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.gallery-bottom {
+    text-align: center;
+    margin-top: 40px;
+    color: #8799ab;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* TENTANG DIA */
+
+.favorite-section {
+    background: #eaf2f9;
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.favorite-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: clamp(35px, 4vw, 50px);
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 22px 0;
+}
+
+.favorite-content > p:not(.eyebrow) {
+    max-width: 450px;
+    color: #71869a;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.outline-button {
+    background: transparent;
+    border: 1px solid #8ca9c4;
+    color: var(--navy);
+    padding: 14px 20px;
+    margin-top: 27px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.outline-button:hover {
+    background: var(--navy);
+    color: white;
+}
+
+.favorite-decoration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.favorite-circle {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #d5e5f3;
+    color: #6e91b3;
+    font-size: 95px;
+    box-shadow: 0 15px 40px #172b4510;
+}
+
+.favorite-decoration span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--navy);
+    font-size: 15px;
+}
+
+/* JARAK */
+
+.distance-section {
+    background: var(--navy);
+    color: white;
+}
+
+.distance-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.distance-section .eyebrow {
+    color: #a9c4df;
+}
+
+.distance-symbol {
+    font-size: 40px;
+    color: #8baac8;
+}
+
+.distance-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 35px 0;
+}
+
+.distance-section h2 span {
+    color: #a8c5e0;
+    font-style: italic;
+}
+
+.distance-description {
+    max-width: 650px;
+}
+
+.distance-description p {
+    color: #d0dce8;
+    font-size: 13px;
+    line-height: 2.1;
+    margin-bottom: 18px;
+}
+
+.distance-footer {
+    border-top: 1px solid #ffffff28;
+    padding-top: 25px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.distance-footer span {
+    font-size: 11px;
+    color: #a9bfd5;
+}
+
+.distance-footer strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+/* PESAN */
+
+.message-section {
+    background: var(--baby);
+}
+
+.message-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.message-card {
+    position: relative;
+    text-align: left;
+    border: 1px solid #d3e1ee;
+    background: #f9fcff;
+    padding: 28px;
+    min-height: 230px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.message-card:hover {
+    background: white;
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px #172b4510;
+}
+
+.message-number {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--blue);
+}
+
+.message-icon {
+    display: block;
+    margin-top: 20px;
+    color: #9bb7d1;
+    font-size: 25px;
+}
+
+.message-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 12px;
+}
+
+.message-card p {
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+/* SURAT */
+
+.letter-section {
+    background: var(--cream);
+    display: flex;
+    justify-content: center;
+}
+
+.letter-card {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    padding: 70px 35px;
+    background: #e6f0f8;
+    border: 1px solid #d7e5f1;
+    overflow: hidden;
+}
+
+.letter-card::before,
+.letter-card::after {
+    content: "♡";
+    position: absolute;
+    color: #c5d9eb;
+    font-size: 90px;
+}
+
+.letter-card::before {
+    left: 20px;
+    top: 15px;
+    transform: rotate(-20deg);
+}
+
+.letter-card::after {
+    right: 20px;
+    bottom: 0;
+    transform: rotate(15deg);
+}
+
+.letter-decoration {
+    font-size: 40px;
+    color: #8eacc9;
+    margin-bottom: 20px;
+}
+
+.letter-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: clamp(35px, 5vw, 48px);
+    font-weight: 500;
+    margin: 22px 0;
+}
+
+.letter-card > p:not(.eyebrow) {
+    max-width: 380px;
+    margin: auto;
+    color: #71869a;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.letter-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 90px 20px 40px;
+    background: #dce9f5;
+}
+
+.footer-heart {
+    font-size: 42px;
+    color: #789bbd;
+    margin-bottom: 25px;
+}
+
+.footer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.3;
+    color: var(--navy);
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.footer > p:not(.eyebrow) {
+    font-size: 12px;
+    color: #71869a;
+    line-height: 2;
+}
+
+.footer-signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #627e9b;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 35px;
+}
+
+.footer-copyright {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #8da3b8;
+    margin-top: 55px;
+}
+
+/* POPUP */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #0d2036b8;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    padding: 55px 40px;
+    background: #f8fbfe;
+    text-align: center;
+    transform: translateY(20px);
+    transition: .3s;
+}
+
+.modal.active .modal-box {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--navy);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-heart {
+    font-size: 35px;
+    color: #8daecc;
+    margin-top: 22px;
+}
+
+.modal-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--navy);
+    margin: 15px 0;
+}
+
+.modal-box > p:not(.eyebrow) {
+    font-size: 13px;
+    line-height: 2.1;
+    color: #71869a;
+}
+
+.modal-done {
+    background: var(--navy);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 28px;
+    transition: .3s;
+}
+
+.modal-done:hover {
+    background: var(--blue);
+}
+
+/* RESPONSIF HP DAN TABLET */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .hero {
+        padding: 70px 8%;
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .hero-photo-wrap {
+        max-width: 420px;
+    }
+
+    .hero-photo img {
+        height: 380px;
+    }
+
+    .section {
+        padding: 85px 8%;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .story-photo {
+        max-width: 500px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .story-photo img {
+        height: 350px;
+    }
+
+    .favorite-section {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-decoration {
+        padding-top: 25px;
+    }
+
+    .message-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .message-card {
+        min-height: 190px;
+    }
+}
+
+/* RESPONSIF HP KECIL */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: auto;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .opening-card {
+        padding: 50px 22px;
+    }
+
+    .opening-card h1 {
+        font-size: 40px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-photo img {
+        height: 330px;
+    }
+
+    .hero-sticker {
+        left: -8px;
+        bottom: 35px;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .story-photo img {
+        height: 290px;
+    }
+
+    .story-text h3 {
+        font-size: 29px;
+    }
+
+    .gallery-grid {
+        gap: 12px;
+    }
+
+    .photo-card img {
+        height: 175px;
+    }
+
+    .photo-tall img {
+        height: 230px;
+    }
+
+    .photo-wide img {
+        height: 210px;
+    }
+
+    .photo-info {
+        font-size: 8px;
+        padding: 12px 3px 5px;
+    }
+
+    .distance-section h2 {
+        font-size: 42px;
+    }
+
+    .favorite-circle {
+        width: 180px;
+        height: 180px;
+        font-size: 75px;
+    }
+
+    .letter-card {
+        padding: 60px 20px;
+    }
+
+    .modal-box {
+        padding: 50px 25px;
+    }
+
+    .modal-box h2 {
+        font-size: 28px;
+    }
+}
